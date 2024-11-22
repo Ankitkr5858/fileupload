@@ -172,7 +172,7 @@ export default () => {
         <FileUploader
           errorMessage={errorMessage}
           onCancel={stopLoading}
-          accept=".pdf, .doc, .docx, .ppt, .pptx, .txt, .rtf"
+          accept=".pdf, .doc, .docx, .ppt, .pptx, .txt, .rtf, .csv"
           onRetry={handleRetry}
           onDrop={(acceptedFiles, rejectedFiles) => {
             handleFiles(acceptedFiles, rejectedFiles);
