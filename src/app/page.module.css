@@ -1,0 +1,34 @@
+
+.container{
+  display: flex;
+  justify-content: center;
+}
+
+.upload{
+  margin-top: 4rem;
+  width: 200px;
+  @media screen and (max-width: 600px) {
+    width: 100%;
+  }
+}
+
+.listHeading{
+  margin-top: 4rem;
+  margin-bottom: 0.4rem;
+  font-size: 22px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.list{
+  margin: 1rem 0;
+  background-color: #80808014;
+  padding: 1.6rem 1rem;
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 15px;
+  text-overflow: wrap;
+}
+
+.css-gRA-DfT{
+  height: 300px !important;
+}
