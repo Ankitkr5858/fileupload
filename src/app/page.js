@@ -35,7 +35,11 @@ export default () => {
           setLoading(false);
           if (rejectedFiles.length > 0) {
             setErrorMessage("Some files failed to upload.");
-            setStatus("No file uploaded");
+            setStatus(
+              `Done ${
+                fileStatuses.filter((status) => status === "Uploaded").length
+              } / ${totalFiles} success`
+            );
 
             const failedFile = rejectedFiles.map((value) => value.name);
             setFailFileName(failedFile);
@@ -61,6 +65,16 @@ export default () => {
       const failedIndex = acceptedFiles.length + index;
       fileStatuses[failedIndex] = "Failed";
     });
+    if (acceptedFiles.length === 0 && rejectedFiles.length > 0) {
+      setTimeout(() => {
+        const failedFile = rejectedFiles.map((file) => file.name);
+      setFailFileName(failedFile);
+      setErrorMessage("All files failed to upload.");
+      setLoading(false);
+      setStatus("No file uploaded");
+      }, 1000);
+    }
+  
   };
 
   const handleRetry = () => {
