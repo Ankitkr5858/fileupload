@@ -170,6 +170,7 @@ export default () => {
           </div>
         )}
         <FileUploader
+         disableClick={true}
           errorMessage={errorMessage}
           onCancel={stopLoading}
           accept=".pdf, .doc, .docx, .ppt, .pptx, .txt, .rtf, .csv"
